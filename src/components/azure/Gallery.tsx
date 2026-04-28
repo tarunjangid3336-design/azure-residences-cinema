@@ -43,7 +43,7 @@ const items = [
     offset: "md:mt-0",
   },
   {
-    src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=85",
+    src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85",
     name: "Garden House",
     size: "1,600 sq ft",
     price: "$1.2M",
