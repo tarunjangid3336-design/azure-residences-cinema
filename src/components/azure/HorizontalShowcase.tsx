@@ -35,27 +35,26 @@ const properties = [
 ];
 
 export function HorizontalShowcase() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-72%"]);
-  const xSpring = useSpring(x, { stiffness: 80, damping: 22, restDelta: 0.001 });
-
   return (
-    <section ref={ref} className="relative h-[400vh] bg-[var(--midnight-deep)]">
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
-        <div className="px-6 md:px-20 mb-10">
-          <div className="text-[var(--gold)] uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4">
-            02 · Collection
-          </div>
-          <h2 className="font-display text-4xl md:text-6xl font-light leading-tight max-w-2xl">
-            Five residences. <span className="italic text-[var(--gold)]">One philosophy.</span>
-          </h2>
+    <section className="relative bg-[var(--midnight-deep)] py-24 md:py-32">
+      <div className="px-6 md:px-20 mb-10">
+        <div className="text-[var(--gold)] uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4">
+          02 · Collection
         </div>
-        <motion.div style={{ x: xSpring }} className="flex gap-8 px-12 will-change-transform">
-          {properties.map((p) => (
-            <TiltCard key={p.name} {...p} />
-          ))}
-        </motion.div>
+        <h2 className="font-display text-4xl md:text-6xl font-light leading-tight max-w-2xl">
+          Five residences. <span className="italic text-[var(--gold)]">One philosophy.</span>
+        </h2>
+      </div>
+      <div
+        className="flex gap-8 overflow-x-auto overflow-y-hidden snap-x snap-mandatory px-6 md:px-12 pb-8 scroll-smooth"
+        style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
+      >
+        {properties.map((p) => (
+          <div key={p.name} className="snap-center shrink-0">
+            <TiltCard {...p} />
+          </div>
+        ))}
+        <div className="shrink-0 w-4" aria-hidden />
       </div>
     </section>
   );
