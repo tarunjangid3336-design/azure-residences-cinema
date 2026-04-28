@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "azure-residences-cinema" },
+      { name: "description", content: "An immersive real estate landing page showcasing luxury properties with cinematic 3D scroll effects." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "azure-residences-cinema" },
+      { property: "og:description", content: "An immersive real estate landing page showcasing luxury properties with cinematic 3D scroll effects." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "azure-residences-cinema" },
+      { name: "twitter:description", content: "An immersive real estate landing page showcasing luxury properties with cinematic 3D scroll effects." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb18766d-e37d-423e-86ce-5e7c5434834d/id-preview-9ee39099--b0941f28-fc49-4b0e-8920-538d6689622f.lovable.app-1777355434704.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb18766d-e37d-423e-86ce-5e7c5434834d/id-preview-9ee39099--b0941f28-fc49-4b0e-8920-538d6689622f.lovable.app-1777355434704.png" },
     ],
     links: [
       {
